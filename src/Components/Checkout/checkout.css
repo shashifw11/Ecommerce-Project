@@ -1,0 +1,36 @@
+.form {
+    width : "300px" ;
+    cursor: pointer;
+}
+
+.input{
+    width : 100% ; 
+    padding: 10px ;
+    border-radius: 5px; 
+    font-weight: lighter;
+    border : 0.5px solid gray ;  
+    
+    cursor :text ; 
+    
+}
+.label{
+    margin-top: 20px;
+}
+
+.submit{ 
+    
+   /* margin-top: 20px ;  */
+   float : right ;  
+    width : 50% ; 
+   /* padding : 8px ;  */
+   /* border-radius : 5px ;  */
+   /* border : none ;  */
+   /* background-color : #1f80e0 ;  */
+   /* color : white ; 
+   font-size  : 20px */
+}
+
+.submit:hover{
+    background-color: teal;
+    
+}

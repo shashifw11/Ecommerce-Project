@@ -1,0 +1,30 @@
+.boxes>div{
+    display : flex ;
+    flex-wrap: wrap; 
+    flex-direction: row;
+    justify-content: space-around; 
+    
+    
+}
+.boxes>div{
+    margin-top: 35px ; ;
+}
+.boxes::after{
+    cursor: pointer;
+}
+
+.boxes:hover{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.button>button{
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.pagin{
+
+  height : 100px ; 
+  margin-left: 40%;
+  margin-top : 20px ; 
+}
