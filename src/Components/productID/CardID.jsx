@@ -70,7 +70,7 @@ export const CardID = ({id,description,category,image,price,title})=>{
               {show ? setShow(false) : setShow(true)}
             handleChange({obj,counter,show})  
             
-            axios.post("https://fakestoreapi.com/carts",obj).then(alert.success("item added to Cart"))
+            axios.post("http://localhost:8080/Cart_item",obj).then(alert.success("item added to Cart"))
                       //https://fakestoreapi.com/carts
                       //http://localhost:8080/Cart_item"
             .catch((error)=>{

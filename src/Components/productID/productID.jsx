@@ -15,7 +15,7 @@ export const ProductDetails=()=>{
 
      const getData = ()=>{
       setLoading(true)
-         axios.get(`https://fakestoreapi.com/products/${id}`).then((data)=>{
+         axios.get(`http://localhost:8080/data/${id}`).then((data)=>{
                //https://fakestoreapi.com/products
                //http://localhost:8080/data/${id}
               setData(data.data) ; 

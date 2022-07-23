@@ -44,7 +44,7 @@ export const Cart = () => {
 
   const postItem = () => {
     setLoading(true)
-    axios.get("https://fakestoreapi.com/carts").then((data) => {
+    axios.get("http://localhost:8080/Cart_item").then((data) => {
          //http://localhost:8080/Cart_item
       //https://fakestoreapi.com/carts
      
@@ -56,7 +56,7 @@ export const Cart = () => {
 
   const deleteChange = async (id) => {
     try {
-      await axios.delete(`https://fakestoreapi.com/carts/${id}`).then(postItem()).then(CartChange(show?false:true)) ; 
+      await axios.delete(`http://localhost:8080/Cart_item/${id}`).then(postItem()).then(CartChange(show?false:true)) ; 
                    //https://fakestoreapi.com/carts
                    //http://localhost:8080/Cart_item/${id}
     } catch (err) {
