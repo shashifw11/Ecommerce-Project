@@ -18,7 +18,9 @@ export const Navbar = () => {
  
 
   useEffect(() => {
-    axios.get("http://localhost:8080/Cart_item").then((data) => {
+    axios.get("https://ecomday.herokuapp.com/Cart_item").then((data) => {
+      //http://localhost:8080/Cart_item
+      //https://ecomday.herokuapp.com/Cart_item
       setCartcount(data.data.length)
     })
   }, [show])  ; 

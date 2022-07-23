@@ -70,7 +70,8 @@ export const CardID = ({id,description,category,image,price,title})=>{
               {show ? setShow(false) : setShow(true)}
             handleChange({obj,counter,show})  
             
-            axios.post("http://localhost:8080/Cart_item",obj).then(alert.success("item added to Cart"))
+            axios.post("https://ecomday.herokuapp.com/Cart_item",obj).then(alert.success("item added to Cart"))
+                       //https://ecomday.herokuapp.com/Cart_item
                       //https://fakestoreapi.com/carts
                       //http://localhost:8080/Cart_item"
             .catch((error)=>{

@@ -47,7 +47,9 @@ const checkInput=()=>{
       alert.success("fill the Contact") ; 
      } else {
        setShow(true) ;   
-       axios.post("http://localhost:8080/Checkout",form).then(alert.success("Checkout Done")).then(setShow(false)).then(navigate("/payment"))
+       axios.post("https://ecomday.herokuapp.com/Checkout",form).then(alert.success("Checkout Done")).then(setShow(false)).then(navigate("/payment"))
+               //https://ecomday.herokuapp.com/Checkout
+               //http://localhost:8080/Checkout
        .catch((err)=>{
            console.log(err) ; 
        }) ; 

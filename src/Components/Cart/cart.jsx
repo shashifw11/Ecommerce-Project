@@ -44,7 +44,8 @@ export const Cart = () => {
 
   const postItem = () => {
     setLoading(true)
-    axios.get("http://localhost:8080/Cart_item").then((data) => {
+    axios.get("https://ecomday.herokuapp.com/Cart_item").then((data) => {
+      //https://ecomday.herokuapp.com/Cart_item
          //http://localhost:8080/Cart_item
       //https://fakestoreapi.com/carts
      
@@ -56,9 +57,10 @@ export const Cart = () => {
 
   const deleteChange = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/Cart_item/${id}`).then(postItem()).then(CartChange(show?false:true)) ; 
+      await axios.delete(`https://ecomday.herokuapp.com/Cart_item/${id}`).then(postItem()).then(CartChange(show?false:true)) ; 
                    //https://fakestoreapi.com/carts
                    //http://localhost:8080/Cart_item/${id}
+                   //https://ecomday.herokuapp.com/Cart_item/${id}
     } catch (err) {
       console.log(err)
     }

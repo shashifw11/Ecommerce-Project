@@ -57,7 +57,8 @@ export const Product = () => {
 
     function getData(data) { 
         setLoading(true)
-        axios.get(`http://localhost:8080/data?_page=${page}&_limit=20`).then((data) => {
+        axios.get(`https://ecomday.herokuapp.com/data?_page=${page}&_limit=20`).then((data) => {
+            //https://ecomday.herokuapp.com/data
             //http://localhost:8080/data?_page=${page}&_limit=20
             //https://fakestoreapi.com/products?_page=${page}&_limit=20
             

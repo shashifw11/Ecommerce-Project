@@ -21,7 +21,9 @@ export const Mens=()=>{
    },[page]) 
 
    function getData(data){
-      axios.get(`http://localhost:8080/data?_page=${page}&_limit=4`).then((data)=>{
+      axios.get(`https://ecomday.herokuapp.com/data?_page=${page}&_limit=4`).then((data)=>{
+        //https://ecomday.herokuapp.com/data
+        //http://localhost:8080/data
               //https://fakestoreapi.com/products?_page=${page}&_limit=5
                
               let arr = data.data

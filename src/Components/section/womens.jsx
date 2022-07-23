@@ -18,7 +18,9 @@ export const Womens =()=>{
    },[]) 
 
    function getData(data){
-      axios.get(`http://localhost:8080/data`).then((data)=>{
+      axios.get(`https://ecomday.herokuapp.com/data`).then((data)=>{
+        //https://ecomday.herokuapp.com/data
+        //http://localhost:8080/data
         let arr = data.data
          
         var arr2 = [] ; 
