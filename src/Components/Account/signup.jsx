@@ -32,29 +32,32 @@ export const SignUP = ()=>{
 
 
       const PostData = async()=>{
+        if(Object.keys(errors).length === 0 && submit){
         
-           const {email , password} = users 
-            const res =  await fetch("https://backendsasi1.herokuapp.com/register" , {
-              //"proxy" : "http://localhost:2345", 
-              method : "POST" , 
-              headers : {
-               "Content-Type" : "application/json"
-              } , 
-              body : JSON.stringify({email , password})
-            })
- 
-            const data = await res.json() ;
-              
-              if(res.status === 400 ||  !data ){
-                       window.alert("User Already Registred") ; 
-                         console.log("Invalied Registration") 
-                        
-              } else{
-                window.alert("Registration Sucessfull");
-                setGet(true);
-                console.log("Sucessful Registration");
-                navigate("/login");
-              }
+          const {email , password} = users 
+          const res =  await fetch("https://backendsasi1.herokuapp.com/register" , {
+            //"proxy" : "http://localhost:2345", 
+            method : "POST" , 
+            headers : {
+             "Content-Type" : "application/json"
+            } , 
+            body : JSON.stringify({email , password})
+          })
+
+          const data = await res.json() ;
+            
+            if(res.status === 400 ||  !data ){
+                     window.alert("User Already Registred") ; 
+                       console.log("Invalied Registration") 
+                      
+            } else{
+              window.alert("Registration Sucessfull");
+              setGet(true);
+              console.log("Sucessful Registration");
+              navigate("/login");
+            }
+        }
+          
          
      }
 
