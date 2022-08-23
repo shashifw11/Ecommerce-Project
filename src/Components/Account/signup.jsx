@@ -32,7 +32,7 @@ export const SignUP = ()=>{
 
 
       const PostData = async()=>{
-        if(Object.keys(errors).length === 0 && submit){
+      //  if(Object.keys(errors).length === 0 && submit){
         
           const {email , password} = users 
           const res =  await fetch("https://backendsasi1.herokuapp.com/register" , {
@@ -55,7 +55,7 @@ export const SignUP = ()=>{
               setGet(true);
               console.log("Sucessful Registration");
               navigate("/login");
-            }
+          //  }
         }
           
          

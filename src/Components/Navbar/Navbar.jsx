@@ -8,7 +8,7 @@ import { AuthContext } from "../../context/Auth"
 import axios from "axios";
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
-export const Navbar = () => {
+export const Navbar = ({user}) => {
   const [text, setText] = useState("")
   const { handleChange } = useContext(SearchContext);
   const { isAuth } = useContext(AuthContext)
@@ -83,7 +83,7 @@ export const Navbar = () => {
                 </button></Link>
 
               <Link to="/login"><Button style={{ marginTop: "10px", color: "white", border: "1px solid white" }} variant="outlined" color="secondary">
-                Login
+                {user ? "Sign out" : "Login"}
               </Button></Link>
             </div>
           </div>

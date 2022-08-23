@@ -14,13 +14,19 @@ import { Payment } from './Components/Checkout/payment';
 import { Checkout } from './Components/Checkout/checkout';
 import { Login } from './Components/Account/login';
 import { Success } from './Components/sucessful/sucess';
+import {useState} from "react" ; 
+function App() { 
 
-function App() {
+  const [user , setUser] = useState(false) ;
+   const handleUser = (data)=>{
+       setUser(data)
+  }
+
   return (
     <div className="App">
-     <Navbar/>
+     <Navbar user = {user}/>
     <Routes> 
-      <Route  path = "/login" element = {<Login/>}/>
+      <Route  path = "/login" element = {<Login handleUser = {handleUser}/>}/>
       <Route  path = "/signup" element = {<SignUP/>}/>
       
       <Route  path = "/" element = {<Product/>}/>
