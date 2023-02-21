@@ -2,11 +2,11 @@
 import "./card.css"
 import {Link} from "react-router-dom"
 
-export const Card = ({id ,rating,image,category,description,price,title})=>{
-     //console.log(rating,price)
+export const Card = ({id ,rating,image,category,price,title})=>{
+    
     return (
         
-<div className="card" >
+<div  className="card" >
     <div className= "imgdiv">
     <img src={image}  className="card-img-top" alt=""/>
     </div>
