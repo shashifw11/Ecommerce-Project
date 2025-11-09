@@ -15,7 +15,7 @@ export const ProductDetails=()=>{
 
      const getData = ()=>{
       setLoading(true)
-         axios.get(`https://ecomday.herokuapp.com/data/${id}`).then((data)=>{
+         axios.get(`https://fakestoreapi.com/products/${id}`).then((data)=>{
           //https://ecomday.herokuapp.com/data/
                //https://fakestoreapi.com/products
                //http://localhost:8080/data/${id}
